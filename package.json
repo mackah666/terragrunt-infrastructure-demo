@@ -1,14 +1,19 @@
 {
   "name": "terragrunt-infrastructure-demo",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "[![Maintained by Gruntwork.io](https://img.shields.io/badge/maintained%20by-gruntwork.io-%235849a6.svg)](https://gruntwork.io/?ref=repo_terragrunt-infra-live-example)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "semantic-release": "semantic-release"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "semantic-release": "^17.4.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mackah666/terragrunt-infrastructure-demo.git"
   }
 }
