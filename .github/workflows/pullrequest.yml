@@ -13,24 +13,6 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
   
-  
-  jobs:
-    build:
-      runs-on: ubuntu-latest
-      env:
-        AWS_DEFAULT_REGION: us-east-2
-      steps:
-      - uses: actions/checkout@v1
-      - name: Install Terraform and Terragrunt
-        run: |
-          brew tap rocketinsights/tgenv
-          brew install tfenv tgenv
-          tfenv install
-          tgenv install
-      - name: Get Versions
-        run: |
-          terragrunt --version
-          terraform --version
 
 # # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 # jobs:
@@ -57,27 +39,27 @@ on:
 
 # name: Lint and Validate Terraform Code
 
-# on:
-#   pull_request:
-#     branches:
-#       - master
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-#     env:
-#       AWS_DEFAULT_REGION: us-east-2
-#     steps:
-#     - uses: actions/checkout@v1
-#     - name: Install Terraform and Terragrunt
-#       run: |
-#         brew tap rocketinsights/tgenv
-#         brew install tfenv tgenv
-#         tfenv install
-#         tgenv install
-#     - name: Get Versions
-#       run: |
-#         terragrunt --version
-#         terraform --version
+on:
+  pull_request:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    env:
+      AWS_DEFAULT_REGION: us-east-2
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install Terraform and Terragrunt
+      run: |
+        brew tap rocketinsights/tgenv
+        brew install tfenv tgenv
+        tfenv install
+        tgenv install
+    - name: Get Versions
+      run: |
+        terragrunt --version
+        terraform --version
     # - name: Terraform Init
     #   run: find . -type f -name "*.tf" -exec dirname {} \;|sort -u | while read m; do (cd "$m" && terraform init -input=false -backend=false) || exit 1; done
 
