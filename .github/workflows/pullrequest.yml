@@ -39,10 +39,10 @@ on:
 
 # name: Lint and Validate Terraform Code
 
-on:
-  pull_request:
-    branches:
-      - master
+# on:
+#   pull_request:
+#     branches:
+#       - main
 jobs:
   build:
     runs-on: ubuntu-latest
