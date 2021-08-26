@@ -16,7 +16,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "semantic-release": "^17.4.6"
+    "@semantic-release/gitlab-config": "^8.0.0",
+    "semantic-release": "^17.4.7"
   },
   "repository": {
     "type": "git",
