@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.0.0...v1.1.0) (2021-08-26)
+
+
+### Features
+
+* renamed pipeline actions file ([d341d24](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/d341d248527293a0e54a65753a7de502e2f2d6f0))
+
 # 1.0.0 (2021-08-26)
 
 
