@@ -64,7 +64,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '10.19'
+          node-version: latest
       - name: Install dependencies
         working-directory: .
         run: npm ci
