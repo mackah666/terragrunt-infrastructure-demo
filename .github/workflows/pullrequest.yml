@@ -33,17 +33,17 @@ jobs:
         tfenv install
         tgenv install
 
-    - name: Setup infra modules deploy key
-      run: |
-        mkdir ~/.ssh
-        echo "${{ secrets.INFRA_MODULES_DEPLOY_KEY }}" > ~/.ssh/id_rsa
-        chmod 600 ~/.ssh/id_rsa
-        ssh-keyscan -t rsa github.com
+#     - name: Setup infra modules deploy key
+#       run: |
+#         mkdir ~/.ssh
+#         echo "${{ secrets.INFRA_MODULES_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+#         chmod 600 ~/.ssh/id_rsa
+#         ssh-keyscan -t rsa github.com
 
-    - name: Terragrunt plan-all
-      run: |
-        terragrunt plan-all
+#     - name: Terragrunt plan-all
+#       run: |
+#         terragrunt plan-all
 
-    - name: Terragrunt apply-all
-      run: |
-        terragrunt apply-all --terragrunt-non-interactive
+#     - name: Terragrunt apply-all
+#       run: |
+#         terragrunt apply-all --terragrunt-non-interactive
