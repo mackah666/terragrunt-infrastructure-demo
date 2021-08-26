@@ -41,3 +41,7 @@ jobs:
           terragrunt_version: 0.21.13
       - name: Interact with Terragrunt
         run: terragrunt --version
+        
+      - name: Plan Terragrunt
+        working-directory: dev/us-east-1/dev
+        run: terragrunt run-all plan
