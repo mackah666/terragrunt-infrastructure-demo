@@ -50,7 +50,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Terragrunt Plan'
         uses: the-commons-project/terragrunt-github-actions@master
-          run: |
+          run:
             terragrunt run-all plan
         # with:
         #   tf_actions_version: ${{ env.tf_version }}
