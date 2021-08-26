@@ -66,6 +66,7 @@ jobs:
         with:
           node-version: '10.19'
       - name: Install dependencies
+        working-directory: .
         run: npm ci
       - name: Release
         env:
