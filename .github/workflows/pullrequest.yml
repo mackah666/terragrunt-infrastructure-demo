@@ -50,14 +50,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: 'Terragrunt Plan'
         uses: the-commons-project/terragrunt-github-actions@master
-        with:
-          tf_actions_version: ${{ env.tf_version }}
-          tg_actions_version: ${{ env.tg_version }}
-          tf_actions_subcommand: 'run-all plan'
-          tf_actions_working_dir: ${{ env.tf_working_dir }}
-          tf_actions_comment: true
+          run: |
+            terragrunt run-all plan
+        # with:
+        #   tf_actions_version: ${{ env.tf_version }}
+        #   tg_actions_version: ${{ env.tg_version }}
+        #   tf_actions_subcommand: 'run-all'
+        #   tf_actions_working_dir: ${{ env.tf_working_dir }}
+        #   tf_actions_comment: true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+# - name: Terragrunt plan-all
+#       run: |
+#         terragrunt plan-all
+#     - name: Terragrunt apply-all
+#       run: |
+#         terragrunt apply-all --terragrunt-non-interactive
 
 
 # # This is a basic workflow to help you get started with Actions
