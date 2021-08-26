@@ -1,0 +1,44 @@
+name: Dev Deploy
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "dev/**"
+
+defaults:
+  run:
+    working-directory: dev
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+÷
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.6
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.6'
+    - name: Install dependencies (Terraform/Terragrunt/kubectl)
+      run: |
+        brew tap rocketinsights/tgenv
+        brew install tfenv tgenv kubectl
+        tfenv install
+        tgenv install
+
+    # - name: Setup infra modules deploy key
+    #   run: |
+    #     mkdir ~/.ssh
+    #     echo "${{ secrets.INFRA_MODULES_DEPLOY_KEY }}" > ~/.ssh/id_rsa
+    #     chmod 600 ~/.ssh/id_rsa
+    #     ssh-keyscan -t rsa github.com
+
+    - name: Terragrunt plan-all
+      run: |
+        terragrunt run-all plan
+
+    # - name: Terragrunt apply-all
+    #   run: |
+    #     terragrunt apply-all --terragrunt-non-interactive
