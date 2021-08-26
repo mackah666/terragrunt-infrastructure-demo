@@ -67,7 +67,7 @@ jobs:
           node-version: '14.17.5'
       - name: Install dependencies
         working-directory: .
-        run: npm ci
+        run: npm install
       - name: Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
