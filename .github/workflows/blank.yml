@@ -59,3 +59,15 @@ jobs:
       - name: Plan Terragrunt
         working-directory: dev/us-east-1/dev
         run: terragrunt run-all plan
+        
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.19'
+      - name: Install dependencies
+        run: npm ci
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
