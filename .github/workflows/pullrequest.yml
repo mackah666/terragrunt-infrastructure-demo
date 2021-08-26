@@ -132,4 +132,5 @@ jobs:
 #     #   run: find . -name ".terraform" -prune -o -type f -name "*.tf" -exec dirname {} \;|sort -u | while read m; do (cd "$m" && terraform validate && echo "√ $m") || exit 1 ; done
 
 #     # - name: Check Terraform config formatting 
+
 #     #   run: terraform fmt -write=false -recursive
