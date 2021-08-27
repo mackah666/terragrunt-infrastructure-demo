@@ -1,3 +1,10 @@
+# [2.1.0-beta.3](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.1.0-beta.2...v2.1.0-beta.3) (2021-08-27)
+
+
+### Features
+
+* added alpha semantic-release and terragrunt plan ([5b791cf](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/5b791cf2a0fa6cade9ccf7dabff29e689346dc93))
+
 # [2.1.0-beta.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.1.0-beta.1...v2.1.0-beta.2) (2021-08-27)
 
 
