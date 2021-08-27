@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.1.0...v1.1.1) (2021-08-27)
+
+
+### Bug Fixes
+
+* added author ([c6e13b2](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/c6e13b2c88e657d2a55b27c05304cea183f460d0))
+
 # [1.1.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.0.0...v1.1.0) (2021-08-26)
 
 
