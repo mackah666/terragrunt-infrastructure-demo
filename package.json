@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "semantic-release": "semantic-release"
   },
-  "author": "mackah666",
+  "author": "mackah666@yahoo.co.uk",
   "license": "ISC",
   "devDependencies": {
     "@semantic-release/gitlab-config": "^8.0.0",
