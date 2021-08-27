@@ -57,7 +57,7 @@ jobs:
         run: terragrunt --version
         
       - name: Plan Terragrunt
-        working-directory: dev/us-east-1/dev
+        working-directory: prod/us-east-1/prod
         run: terragrunt run-all plan
         
         
