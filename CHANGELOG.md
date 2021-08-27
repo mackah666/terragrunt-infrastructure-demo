@@ -1,3 +1,12 @@
+# [2.2.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.1.0...v2.2.0) (2021-08-27)
+
+
+### Features
+
+* enabled terragrunt plan for prod ([2c96602](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/2c96602d7fbd538e5127a32f91250b64cde58973))
+* enabled terragrunt plan for prod ([6cf5e03](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/6cf5e03189488b6799e71cda7e64ba9c17277217))
+* fixed the correct region => us-east-2 ([4b37e5c](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/4b37e5ca718cd6df5a50ceb70914548c958be173))
+
 # [2.2.0-beta.3](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.2.0-beta.2...v2.2.0-beta.3) (2021-08-27)
 
 
