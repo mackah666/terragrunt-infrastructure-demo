@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.5.1...v1.6.0) (2021-08-27)
+
+
+### Features
+
+* update contains breaking changes ([1b63f68](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/1b63f6813c2c4fd4ab9c25f17c1013369d680091))
+
 ## [1.5.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.5.0...v1.5.1) (2021-08-27)
 
 
