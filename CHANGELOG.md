@@ -1,3 +1,15 @@
+## [1.5.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.5.0...v1.5.1) (2021-08-27)
+
+
+### Bug Fixes
+
+* fixed config ([b5220bd](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/b5220bd3626079be6b1053a0f3aa07d145602a1a))
+
+
+### BREAKING CHANGES
+
+* stumped major not triggering
+
 # [1.5.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.4.0...v1.5.0) (2021-08-27)
 
 
