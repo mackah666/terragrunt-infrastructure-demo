@@ -1,3 +1,15 @@
+# [1.4.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.3.0...v1.4.0) (2021-08-27)
+
+
+### Features
+
+*  should break ([084fbae](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/084fbaee726c038d6bff22d8c252cdadb4a2251c))
+
+
+### BREAKING CHANGES
+
+* This should force a major version increment
+
 # [1.3.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.2.0...v1.3.0) (2021-08-27)
 
 
