@@ -1,3 +1,10 @@
+# [2.1.0-beta.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.0.0...v2.1.0-beta.1) (2021-08-27)
+
+
+### Features
+
+* added pipelines for develop and qa env ([1da31e1](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/1da31e1dc12639987cb92f651aae5839faf73a98))
+
 # [2.0.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.6.0...v2.0.0) (2021-08-27)
 
 # [1.6.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.5.1...v1.6.0) (2021-08-27)
