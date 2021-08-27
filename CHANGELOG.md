@@ -1,3 +1,5 @@
+# [2.0.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.6.0...v2.0.0) (2021-08-27)
+
 # [1.6.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.5.1...v1.6.0) (2021-08-27)
 
 
