@@ -1,3 +1,10 @@
+# [2.2.0-beta.3](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.2.0-beta.2...v2.2.0-beta.3) (2021-08-27)
+
+
+### Features
+
+* fixed the correct region => us-east-2 ([4b37e5c](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/4b37e5ca718cd6df5a50ceb70914548c958be173))
+
 # [2.2.0-beta.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.2.0-beta.1...v2.2.0-beta.2) (2021-08-27)
 
 
