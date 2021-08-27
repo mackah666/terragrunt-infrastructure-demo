@@ -1,3 +1,17 @@
+# [1.5.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.4.0...v1.5.0) (2021-08-27)
+
+
+### Features
+
+* fixed typo on .releaserc ([760208b](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/760208bda2f37354d98ed80c709ada6719de30de))
+* updated releaserc ([744016e](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/744016e93f1832626883d8bfbf7b6f03c2ab8086))
+
+
+### BREAKING CHANGES
+
+* This should trigger a major release
+* This should force a major release
+
 # [1.4.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.3.0...v1.4.0) (2021-08-27)
 
 
