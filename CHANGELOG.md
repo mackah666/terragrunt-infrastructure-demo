@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.2.0...v1.3.0) (2021-08-27)
+
+
+### Features
+
+* allow config change ([388bbed](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/388bbed7da6c67619cefe7e8c673d5849c48070e))
+
+
+### BREAKING CHANGES
+
+* this break older versions
+
 # [1.2.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v1.1.1...v1.2.0) (2021-08-27)
 
 
