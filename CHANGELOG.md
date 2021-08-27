@@ -1,3 +1,10 @@
+# [2.2.0-beta.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.2.0-beta.1...v2.2.0-beta.2) (2021-08-27)
+
+
+### Features
+
+* enabled terragrunt plan for prod ([2c96602](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/2c96602d7fbd538e5127a32f91250b64cde58973))
+
 # [2.2.0-beta.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.1.0...v2.2.0-beta.1) (2021-08-27)
 
 
