@@ -1,3 +1,10 @@
+# [2.1.0-beta.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.1.0-beta.1...v2.1.0-beta.2) (2021-08-27)
+
+
+### Features
+
+* added stage pipeline ([b702cfc](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/b702cfcc77fb9a06e46e3cb7a37f62fa1d42b017))
+
 # [2.1.0-beta.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.0.0...v2.1.0-beta.1) (2021-08-27)
 
 
