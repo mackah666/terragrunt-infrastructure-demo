@@ -10,7 +10,7 @@ locals {
 # working directory, into a temporary folder, and execute your Terraform commands in that folder.
 terraform {
   # https://github.com/gruntwork-io/terragrunt-infrastructure-modules-example.git
-  source = "git@github.com:mackah666/terragrunt-test-modules.git//mysql?ref=1.0.5"
+  source = "git@github.com:mackah666/terragrunt-test-modules.git//mysql?ref=v1.0.0"
 }
 
 # Include all settings from the root terragrunt.hcl file
