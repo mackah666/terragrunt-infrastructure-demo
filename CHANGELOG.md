@@ -1,3 +1,11 @@
+# [2.3.0-beta.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.2.0...v2.3.0-beta.1) (2021-08-28)
+
+
+### Features
+
+* updated version => v1.0.0 ([6398bde](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/6398bde9ede815f3d24b3cc32b6c18605677bbaa))
+* updated version => v1.0.0 ([d84cc13](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/d84cc13f3798eabc7e3413d14c04f5443953a067))
+
 # [2.2.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.1.0...v2.2.0) (2021-08-27)
 
 
