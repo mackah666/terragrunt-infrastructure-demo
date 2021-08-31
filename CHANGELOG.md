@@ -14,6 +14,22 @@
 * updated version => v1.0.0 ([6398bde](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/6398bde9ede815f3d24b3cc32b6c18605677bbaa))
 * updated version => v1.0.0 ([d84cc13](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/d84cc13f3798eabc7e3413d14c04f5443953a067))
 
+# [2.3.0-beta.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.2.0...v2.3.0-beta.1) (2021-08-31)
+
+
+### Bug Fixes
+
+* added the correct url for the repo ([3ed87d1](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/3ed87d1bea14389764bcfd27279247c402b3ee10))
+
+
+### Features
+
+* added missing files ([1c1b465](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/1c1b465570043b5dd86dfc39b91118d6e5d20d0b))
+* update .release ([da0da2c](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/da0da2cf77098a864c92172c6df1538b624c98fc))
+* updated .releaserc ([7d2498c](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/7d2498cfcf22554c4a11a962c938fe83bda91adb))
+* updated version => v1.0.0 ([6398bde](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/6398bde9ede815f3d24b3cc32b6c18605677bbaa))
+* updated version => v1.0.0 ([d84cc13](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/d84cc13f3798eabc7e3413d14c04f5443953a067))
+
 # [2.2.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.1.0...v2.2.0) (2021-08-27)
 
 
