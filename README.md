@@ -2,16 +2,16 @@
 
 # Example infrastructure-live for Terragrunt
 
-This repo, along with the [terragrunt-infrastructure-modules-example
-repo](https://github.com/gruntwork-io/terragrunt-infrastructure-modules-example), show an example file/folder structure
+This repo, along with the [terragrunt-test-modules
+repo](https://github.com/mackah666/terragrunt-infrastructure-demo), show an example file/folder structure
 you can use with [Terragrunt](https://github.com/gruntwork-io/terragrunt) to keep your
 [Terraform](https://www.terraform.io) code DRY. For background information, check out the [Keep your Terraform code
 DRY](https://github.com/gruntwork-io/terragrunt#keep-your-terraform-code-dry) section of the Terragrunt documentation.
 
-This repo shows an example of how to use the modules from the `terragrunt-infrastructure-modules-example` repo to
+This repo shows an example of how to use the modules from the `terragrunt-infrastructure-demo` repo to
 deploy an Auto Scaling Group (ASG) and a MySQL DB across three environments (qa, stage, prod) and two AWS accounts
 (non-prod, prod), all without duplicating any of the Terraform code. That's because there is just a single copy of
-the Terraform code, defined in the `terragrunt-infrastructure-modules-example` repo, and in this repo, we solely define
+the Terraform code, defined in the `terragrunt-test-modules` repo, and in this repo, we solely define
 `terragrunt.hcl` files that reference that code (at a specific version, too!) and fill in variables specific to each
 environment.
 
