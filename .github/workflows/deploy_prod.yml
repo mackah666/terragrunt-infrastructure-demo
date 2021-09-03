@@ -31,14 +31,12 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Run Infracost
         working-directory: prod/us-east-1/prod
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
           # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
           curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
           infracost configure --help
@@ -63,19 +61,21 @@ jobs:
           terragrunt_version: latest
       - name: Interact with Terragrunt
         run: terragrunt --version
-
-      - name: Run infracost diff
-        uses: infracost/infracost-gh-action@master
-        env:
-          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          path: prod/us-east-1/prod
-          usage_file: prod/us-east-1/prod/infracost-usage.yml
         
       - name: Plan Terragrunt
         working-directory: prod/us-east-1/prod
         run: terragrunt run-all plan
+
+      - name: Run Infracost
+        working-directory: prod/us-east-1/prod
+        env:
+          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
+          curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
+          infracost configure --help
+          ./calculate_costs.sh
         
         
       - name: Setup Node.js
