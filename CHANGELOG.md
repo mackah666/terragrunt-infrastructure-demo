@@ -1,3 +1,10 @@
+## [2.8.8](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.7...v2.8.8) (2021-09-03)
+
+
+### Bug Fixes
+
+* added infracost creds file ([2a74d6e](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/2a74d6e7aeaa471248fffcec85451ad902604502))
+
 ## [2.8.7](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.6...v2.8.7) (2021-09-03)
 
 
