@@ -57,13 +57,14 @@ jobs:
         run: terragrunt --version
 
       - name: Run infracost diff
-        uses: infracost/infracost-gh-action@master
+        uses: infracost/infracost-gh-action@v0.1.2
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        run: infracost breakdown --path: prod/us-east-1/prod
-        # with:
+        # run: infracost breakdown --path: prod/us-east-1/prod
+        with:
+          terraform_dir: prod/us-east-1/prod
         #   path: prod/us-east-1/prod
         #   entrypoint: prod/us-east-1/prod/calculate_costs.sh
           # usage_file: prod/us-east-1/prod/infracost-usage.yml
