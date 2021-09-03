@@ -1,3 +1,10 @@
+## [2.8.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.0...v2.8.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* made changes to lb usage ([f5bf753](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/f5bf7532e2f417ca5dc534188ad272b54e2fa1e4))
+
 # [2.8.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.7.0...v2.8.0) (2021-09-03)
 
 
