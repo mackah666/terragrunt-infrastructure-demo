@@ -1,3 +1,16 @@
+# [2.9.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.9...v2.9.0) (2021-09-03)
+
+
+### Bug Fixes
+
+* fixed ami type ([50c798d](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/50c798d37e2f29c86b5e30dee433462f7ff839cc))
+* updated pipeline with notify teams stage ([234c005](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/234c0051ed23be5b0133ebe25b3042d6fce28578))
+
+
+### Features
+
+* added script to update teams ([4056bb1](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/4056bb17bfcfa3009ffdeaf056bae88b2f08c700))
+
 ## [2.8.9](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.8...v2.8.9) (2021-09-03)
 
 
