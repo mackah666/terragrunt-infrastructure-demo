@@ -58,7 +58,7 @@ jobs:
       - name: Run Infracost
         working-directory: prod/us-east-1/prod
         env:
-          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+          INFRACOST_API_KEY: "api_key: 5dQDyZWqQyMG0dQE2BvXPrH7TjQzBuyv"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
