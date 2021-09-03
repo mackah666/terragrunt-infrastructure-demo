@@ -62,11 +62,9 @@ jobs:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        working-directory: dev/us-east-1/dev
-        run: infracost breakdown --path .
-        # with:
-        #   path: terraform
-        #   usage_file: infracost-usage.yml
+        with:
+          path: dev/us-east-1/dev
+          entrypoint: scripts/ci/diff.sh
         
       - name: Plan Terragrunt
         working-directory: dev/us-east-1/dev
