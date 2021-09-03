@@ -61,7 +61,10 @@ jobs:
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          path: terraform
 
+      - name: Get Infracost 
         working-directory: dev/us-east-1/dev
         run: infracost breakdown --path .
         # with:
