@@ -65,7 +65,7 @@ jobs:
           path: terraform
 
       - name: Get Infracost 
-        working-directory: dev/us-east-1/dev
+        working-directory: dev/us-east-1/prod
         run: infracost breakdown --path .
         # with:
         #   path: terraform
