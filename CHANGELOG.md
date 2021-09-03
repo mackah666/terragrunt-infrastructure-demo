@@ -1,3 +1,46 @@
+## [2.5.3](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.2...v2.5.3) (2021-09-03)
+
+
+### Bug Fixes
+
+* added diff.sh ([3c97bc6](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/3c97bc61401b3c0a6f5f11235b0ac4f82beaaa20))
+
+## [2.5.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.1...v2.5.2) (2021-09-03)
+
+
+### Bug Fixes
+
+* added diff.sh ([39a8489](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/39a8489e170db066d514348f2bd5e107ce8e25d9))
+
+## [2.5.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.0...v2.5.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* added correct path for infracost-usage.yml ([9a55cd3](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/9a55cd380d39cec3ac1b3dd47d0a390a9218307f))
+
+# [2.5.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.4.0...v2.5.0) (2021-09-03)
+
+
+### Bug Fixes
+
+* added correct path for infracost-usage.yml ([99a1f66](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/99a1f66814b0c4f6cf11f1dbe87a38db5e9042ee))
+* added infracost file ([3f127a1](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/3f127a1d924718b7841a503748e7039ebdb34807))
+* added infracost file ([f39fa4d](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/f39fa4d0482b2461ea9c774d321cf9be755c2148))
+* added infracost file ([a16e6d8](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/a16e6d814db72729a584fd2b33536957a858eea0))
+* added script and entrypoint ([8268a53](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/8268a53b30c79b06dd4ca1d6fa70b52c1ef7dfbc))
+* added script and entrypoint ([18449b4](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/18449b4a94ea97dbc054ca40b10dee5ee61e8861))
+* updated path ([d72f7ae](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/d72f7ae5dec3aa4b2a2a08d1470999d207c12570))
+* updated path ([e0ab47f](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/e0ab47f49382b97ff8c178814884bc68c33758fe))
+* updated path ([c7bf06b](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/c7bf06bcabf5d35f133fc88227363b88f9c5cb50))
+* updated path ([79ce926](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/79ce926f10746821166f264d6d8067e5cbbbffe3))
+
+
+### Features
+
+* added infracost to the build pipeline ([c6698db](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/c6698dbc1d12d724860c5abcd6416bba05d72567))
+* added infracost to the build pipeline ([a86de20](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/a86de208879fa8de31803a598297807527e1f267))
+
 # [2.4.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.3.0...v2.4.0) (2021-09-02)
 
 
