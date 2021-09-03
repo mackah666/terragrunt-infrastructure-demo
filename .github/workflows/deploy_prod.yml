@@ -79,7 +79,12 @@ jobs:
       - name: Install dependencies
         working-directory: .
         run: npm install
-      - name: Release
+      - name: Create Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
+
+      # This will nofity teams
+      - name: Notify Teams
+        run: |
+          ./teams_update.sh
