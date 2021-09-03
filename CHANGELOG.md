@@ -1,3 +1,10 @@
+## [2.8.9](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.8...v2.8.9) (2021-09-03)
+
+
+### Bug Fixes
+
+* changed ami size ([3e378c1](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/3e378c1ab92fb907cba7c3683bfaa2e61a9605bb))
+
 ## [2.8.8](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.7...v2.8.8) (2021-09-03)
 
 
