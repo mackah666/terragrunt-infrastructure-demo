@@ -1,3 +1,12 @@
+## [2.8.5](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.4...v2.8.5) (2021-09-03)
+
+
+### Bug Fixes
+
+* moved infracost stage to after terraform install step ([2e0eb30](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/2e0eb30498a8f47a91e7ad3a885504a09bc5e098))
+* re-added infracost script ([aa7e0de](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/aa7e0de2781b17de633792f7503537e247a14ec1))
+* removed duplicate infracost stage ([9ca1028](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/9ca1028329c01584d5a86ec74540b942c2e199a4))
+
 ## [2.8.4](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.3...v2.8.4) (2021-09-03)
 
 
