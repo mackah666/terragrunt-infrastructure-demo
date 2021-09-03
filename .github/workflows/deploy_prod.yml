@@ -63,7 +63,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: prod/us-east-1/prod
-          usage_file: prod/us-east-1/prod/infracost-usage.yml
+          entrypoint: prod/us-east-1/prod/calculate_costs.sh
+          # usage_file: prod/us-east-1/prod/infracost-usage.yml
 
       # - name: Get Infracost 
       #   working-directory: prod/us-east-1/prod
