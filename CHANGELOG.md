@@ -1,3 +1,10 @@
+# [2.6.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.3...v2.6.0) (2021-09-03)
+
+
+### Features
+
+* updated develop pipeline ([a24ae78](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/a24ae784e30d4b8a29f46091008eb254a992c7be))
+
 ## [2.5.3](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.2...v2.5.3) (2021-09-03)
 
 
