@@ -55,6 +55,18 @@ jobs:
           terragrunt_version: latest
       - name: Interact with Terragrunt
         run: terragrunt --version
+
+      - name: Run infracost diff
+        uses: infracost/infracost-gh-action@master
+        env:
+          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        working-directory: dev/us-east-1/dev
+        run: infracost breakdown --path .
+        # with:
+        #   path: terraform
+        #   usage_file: infracost-usage.yml
         
       - name: Plan Terragrunt
         working-directory: prod/us-east-1/prod
