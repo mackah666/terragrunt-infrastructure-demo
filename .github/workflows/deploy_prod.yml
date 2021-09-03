@@ -62,11 +62,11 @@ jobs:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: prod/us-east-1/prod
+          entrypoint: prod/us-east-1/prod/diff.sh
 
-      - name: Get Infracost 
-        working-directory: prod/us-east-1/prod
-        run: infracost
+      # - name: Get Infracost 
+      #   working-directory: prod/us-east-1/prod
+      #   run: infracost
         # with:
         #   path: terraform
         #   usage_file: infracost-usage.yml
