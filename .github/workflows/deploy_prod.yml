@@ -62,7 +62,7 @@ jobs:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          path: terraform
+          path: prod/us-east-1/prod
 
       - name: Get Infracost 
         working-directory: prod/us-east-1/prod
