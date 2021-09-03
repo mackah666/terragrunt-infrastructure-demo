@@ -32,12 +32,17 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
+        env:
+          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working-directory: prod/us-east-2/prod
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
           # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
           curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
           infracost configure --help
+          ./calculate_costs.sh
           
       - name: Setup infra modules deploy key
         run: |
@@ -59,31 +64,12 @@ jobs:
       - name: Interact with Terragrunt
         run: terragrunt --version
 
-      # - name: Run infracost diff
-      #   uses: infracost/infracost-gh-action@v0.1.2
-      #   env:
-      #     INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      #   # run: infracost breakdown --path: prod/us-east-1/prod
-      #   with:
-      #     terraform_dir: prod/us-east-1/prod
-      #   #   path: prod/us-east-1/prod
-        #   entrypoint: prod/us-east-1/prod/calculate_costs.sh
-          # usage_file: prod/us-east-1/prod/infracost-usage.yml
-
-      # - name: Get Infracost 
-      #   working-directory: prod/us-east-1/prod
-      #   run: infracost
-      #   # with:
-      #   #   path: terraform
-      #   #   usage_file: infracost-usage.yml
-
       - name: Run infracost diff
         uses: infracost/infracost-gh-action@master
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        working -directory: 
         with:
           path: prod/us-east-1/prod
           usage_file: prod/us-east-1/prod/infracost-usage.yml
