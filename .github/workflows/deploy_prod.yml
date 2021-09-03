@@ -61,6 +61,8 @@ jobs:
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          run: infracost breakdown --path: prod/us-east-1/prod
         # with:
         #   path: prod/us-east-1/prod
         #   entrypoint: prod/us-east-1/prod/calculate_costs.sh
