@@ -1,3 +1,10 @@
+## [2.8.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.1...v2.8.2) (2021-09-03)
+
+
+### Bug Fixes
+
+* added manual infracost install ([cb43d89](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/cb43d89d6f08330f40019fcacbdc56ddee4067db))
+
 ## [2.8.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.0...v2.8.1) (2021-09-03)
 
 
