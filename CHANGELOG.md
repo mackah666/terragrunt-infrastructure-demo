@@ -1,3 +1,12 @@
+## [2.8.7](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.6...v2.8.7) (2021-09-03)
+
+
+### Bug Fixes
+
+* added environment ([ca617c6](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/ca617c65a814c6ac083578f114aa56aae14d1c1e))
+* removed quotes from api-key ([350b649](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/350b649d03290242b721c7cb239f3012d2c5d5d3))
+* reverted api-key ([dab68a6](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/dab68a6e7f9d2f0f386ee7829f53c88918b58585))
+
 ## [2.8.6](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.5...v2.8.6) (2021-09-03)
 
 
