@@ -1,3 +1,10 @@
+## [2.5.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.1...v2.5.2) (2021-09-03)
+
+
+### Bug Fixes
+
+* added diff.sh ([39a8489](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/39a8489e170db066d514348f2bd5e107ce8e25d9))
+
 ## [2.5.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.0...v2.5.1) (2021-09-03)
 
 
