@@ -63,14 +63,14 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path: prod/us-east-1/prod
-          entrypoint: calculate_costs.sh
+          usage_file: infracost-usage.yml
 
-      - name: Get Infracost 
-        working-directory: prod/us-east-1/prod
-        run: infracost
-        # with:
-        #   path: terraform
-        #   usage_file: infracost-usage.yml
+      # - name: Get Infracost 
+      #   working-directory: prod/us-east-1/prod
+      #   run: infracost
+      #   # with:
+      #   #   path: terraform
+      #   #   usage_file: infracost-usage.yml
         
       - name: Plan Terragrunt
         working-directory: prod/us-east-1/prod
