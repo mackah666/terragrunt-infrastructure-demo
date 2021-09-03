@@ -1,3 +1,14 @@
+## [2.8.4](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.3...v2.8.4) (2021-09-03)
+
+
+### Bug Fixes
+
+* added script to run infracost ([6554ba9](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/6554ba98ac631517609b3ed69b796d9298aa6700))
+* fixed incorrect dir path ([98cbf22](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/98cbf228e3294b2a00c7e97b5db768b524517289))
+* moved working-directory to the place ([8bda5e6](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/8bda5e6e755f1c576242a88519a8d3c4c82e81c0))
+* removed unused working-directory ([b9835aa](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/b9835aa3db1b34777258d93be56b1c92016856a0))
+* replaced script with infracost breakdown --path . ([5ad9083](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/5ad90838a52e34fbf4afe82307dae2ff8901aa0c))
+
 ## [2.8.3](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.2...v2.8.3) (2021-09-03)
 
 
