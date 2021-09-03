@@ -69,7 +69,6 @@ jobs:
         env:
           INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        working -directory: 
         with:
           path: prod/us-east-1/prod
           usage_file: prod/us-east-1/prod/infracost-usage.yml
