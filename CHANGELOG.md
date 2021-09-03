@@ -1,3 +1,10 @@
+## [2.6.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.6.0...v2.6.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* using calculate_costs.sh ([538e891](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/538e891f4d5fb4e1d413507916b58809d43833df))
+
 # [2.6.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.3...v2.6.0) (2021-09-03)
 
 
