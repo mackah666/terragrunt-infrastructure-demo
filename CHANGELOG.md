@@ -1,3 +1,10 @@
+## [2.5.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.5.0...v2.5.1) (2021-09-03)
+
+
+### Bug Fixes
+
+* added correct path for infracost-usage.yml ([9a55cd3](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/9a55cd380d39cec3ac1b3dd47d0a390a9218307f))
+
 # [2.5.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.4.0...v2.5.0) (2021-09-03)
 
 
