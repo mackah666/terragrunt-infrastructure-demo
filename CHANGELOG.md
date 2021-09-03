@@ -1,3 +1,10 @@
+## [2.8.6](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.5...v2.8.6) (2021-09-03)
+
+
+### Bug Fixes
+
+* hard-code api key for now ([ceea5ce](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/ceea5ce36da8b8ab9770d858460b4498f72b046f))
+
 ## [2.8.5](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.4...v2.8.5) (2021-09-03)
 
 
