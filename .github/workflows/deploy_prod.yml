@@ -28,7 +28,7 @@ jobs:
 
       - run: aws s3 ls
 
-      - run: echo $AWS_WEB_IDENTITY_TOKEN_FILE
+      - run: cat /tmp/awscreds
 
       # - run: aws sts get-session-token >> cred.txt
 
