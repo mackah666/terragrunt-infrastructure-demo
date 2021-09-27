@@ -10,7 +10,7 @@ locals {
 # working directory, into a temporary folder, and execute your Terraform commands in that folder.
 terraform {
   # https://github.com/gruntwork-io/terragrunt-infrastructure-modules-example.git
-  source = "git@github.com:mackah666/terragrunt-test-modules.git//ecr-ecs-deploy?ref=v1.11.5"
+  source = "git@github.com:mackah666/terragrunt-test-modules.git//ecr-ecs-deploy?ref=v1.11.8"
 }
 
 # Include all settings from the root terragrunt.hcl file

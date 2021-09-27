@@ -10,7 +10,7 @@ locals {
 # working directory, into a temporary folder, and execute your Terraform commands in that folder.
 terraform {
   # https://github.com/gruntwork-io/terragrunt-infrastructure-modules-example.git
-  source = "git@github.com:mackah666/terragrunt-test-modules.git//mysql?ref=v1.15.7"
+  source = "git@github.com:mackah666/terragrunt-test-modules.git//iam-user?ref=v1.14.0"
 }
 
 # Include all settings from the root terragrunt.hcl file
@@ -20,19 +20,8 @@ include {
 
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
-  name           = "mysql_${local.env}"
-  instance_class = "db.t2.micro"
-
-  allocated_storage = 20
-  storage_type      = "standard"
-
-  master_username = "admin"
-
-
-  tags = {
-    environment = local.env
-    project     = "demo"
-    team        = "the A team"
-
-  }
+  name = "yusef.ackah"
+  create_iam_user_login_profile = true
+  create_iam_access_key         = true
+  pgp_key = "keybase:test"
 }

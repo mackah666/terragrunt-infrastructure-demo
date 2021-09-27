@@ -20,9 +20,9 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
-      AWS_DEFAULT_REGION: us-east-1
+      # AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+      # AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+      # AWS_DEFAULT_REGION: us-east-1
       TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -44,6 +44,11 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -t rsa github.com
           
+      - name: Configure AWS
+        run: |
+          export AWS_ROLE_ARN=arn:aws:iam::733041935482:role/GithubAWSTerraformRole
+          export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
+          export AWS_DEFAULT_REGION=us-east-2
           
       - name: Install Terraform
         uses: little-core-labs/install-terraform@v2.0.0
