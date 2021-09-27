@@ -26,15 +26,15 @@ generate "provider" {
   if_exists = "overwrite_terragrunt"
   contents  = <<EOF
 provider "aws" {
-  # region = "${local.aws_region}"
+  region = "${local.aws_region}"
 
-  # # Only these AWS Account IDs may be operated on by this template
-  # allowed_account_ids = ["${local.account_id}"]
+  # Only these AWS Account IDs may be operated on by this template
+  allowed_account_ids = ["${local.account_id}"]
 
-  assume_role {
-    # The role ARN within Account B to AssumeRole into. Created in step 1.
-    role_arn    = "arn:aws:iam::733041935482:role/GithubAWSTerraformRole"
-  }
+  # assume_role {
+  #   # The role ARN within Account B to AssumeRole into. Created in step 1.
+  #   role_arn    = "arn:aws:iam::733041935482:role/GithubAWSTerraformRole"
+  # }
 }
 EOF
 }

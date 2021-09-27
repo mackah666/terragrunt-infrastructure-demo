@@ -58,7 +58,7 @@ jobs:
 
           curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
       
-      # - run: aws iam create-access-key  --generate-cli-skeleton output
+      - run: aws s3 ls
           
       - name: Install Terraform
         uses: little-core-labs/install-terraform@v2.0.0
