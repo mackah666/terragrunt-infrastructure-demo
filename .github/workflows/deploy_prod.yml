@@ -48,7 +48,7 @@ jobs:
         run: |
           export AWS_ROLE_ARN=arn:aws:iam::733041935482:role/GithubAWSTerraformRole
           export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
-          export AWS_DEFAULT_REGION=us-east-2
+          export AWS_DEFAULT_REGION=us-east-1
           
       - name: Install Terraform
         uses: little-core-labs/install-terraform@v2.0.0
