@@ -31,11 +31,11 @@ provider "aws" {
   # Only these AWS Account IDs may be operated on by this template
   allowed_account_ids = ["${local.account_id}"]
 
-  assume_role {
-    role_arn     = "arn:aws:iam::733041935482:role/GithubAWSTerraformRole"
-    session_name = "SESSION_NAME"
-    external_id  = "EXTERNAL_ID"
-  }
+  # assume_role {
+  #   role_arn     = "arn:aws:iam::733041935482:role/GithubAWSTerraformRole"
+  #   session_name = "SESSION_NAME"
+  #   external_id  = "EXTERNAL_ID"
+  # }
 }
 }
 EOF
