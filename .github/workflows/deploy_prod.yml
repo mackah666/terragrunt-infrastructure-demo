@@ -1,124 +1,152 @@
-# This is a basic workflow to help you get started with Actions
-
-name: Prod Deploy
-
-# Controls when the workflow will run
+# .github/workflows/example.yml
+name: Example
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
   push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
-    env:
-      # AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
-      # AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
-      AWS_DEFAULT_REGION: us-east-1
-      TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
-      
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
+    permissions:
+      id-token: write
+      contents: read
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - run: sleep 5 # there's still a race condition for now
 
-      # Runs a set of commands using the runners shell
-      - name: Setup infracost creds
-        run: |
-          mkdir ~/.config/infracost
-          echo "${{ secrets.INFRACOST_CREDS }}" > ~/.config/infracost/credentials.yml
-          chmod 600 ~/.config/infracost/credentials.yml
-
-      - name: Setup infra modules deploy key
-        run: |
-          mkdir ~/.ssh
-          echo "${{ secrets.ssh_key_shared_modules }}" > ~/.ssh/id_rsa
-          chmod 600 ~/.ssh/id_rsa
-          ssh-keyscan -t rsa github.com
-       
-          
       - name: Configure AWS
         run: |
           export AWS_ROLE_ARN=arn:aws:iam::733041935482:role/GithubAWSTerraformRole
           export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
-          export AWS_DEFAULT_REGION=us-east-2
+          export AWS_DEFAULT_REGION=us-east-1
 
           echo AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE >> $GITHUB_ENV
           echo AWS_ROLE_ARN=$AWS_ROLE_ARN >> $GITHUB_ENV
           echo AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION >> $GITHUB_ENV
 
           curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
+
+      - run: aws sts get-caller-identity # just an example. why not deploy something?
+
+# # This is a basic workflow to help you get started with Actions
+
+# name: Prod Deploy
+
+# # Controls when the workflow will run
+# on:
+#   # Triggers the workflow on push or pull request events but only for the main branch
+#   push:
+#     branches: [ main ]
+#   pull_request:
+#     branches: [ main ]
+
+#   # Allows you to run this workflow manually from the Actions tab
+#   workflow_dispatch:
+
+# # A workflow run is made up of one or more jobs that can run sequentially or in parallel
+# jobs:
+#   # This workflow contains a single job called "build"
+#   build:
+#     # The type of runner that the job will run on
+#     runs-on: ubuntu-latest
+#     env:
+#       # AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+#       # AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+#       AWS_DEFAULT_REGION: us-east-1
+#       TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
       
-      # - run: aws s3 ls
 
-      - run: aws sts get-session-token >> cred.txt
+#     # Steps represent a sequence of tasks that will be executed as part of the job
+#     steps:
+#       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+#       - uses: actions/checkout@v2
 
+#       # Runs a set of commands using the runners shell
+#       - name: Setup infracost creds
+#         run: |
+#           mkdir ~/.config/infracost
+#           echo "${{ secrets.INFRACOST_CREDS }}" > ~/.config/infracost/credentials.yml
+#           chmod 600 ~/.config/infracost/credentials.yml
 
-#       $ aws sts assume-role-with-web-identity \
-#  --role-arn $AWS_ROLE_ARN \
-#  --role-session-name mh9test \
-#  --web-identity-token file://$AWS_WEB_IDENTITY_TOKEN_FILE \
-#  --duration-seconds 1000 > /tmp/irp-cred.txt
-# $ export AWS_ACCESS_KEY_ID="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.AccessKeyId")"
-# $ export AWS_SECRET_ACCESS_KEY="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SecretAccessKey")"
-# $ export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")"
-      - run: cat cred.txt
-
-      - run: export AWS_ACCESS_KEY_ID="$(cat cred.txt | jq -r ".Credentials.AccessKeyId")"
-
-      - run: export AWS_SECRET_ACCESS_KEY="$(cat cred.txt | jq -r ".Credentials.SecretAccessKey")"
-
-      # - run: aws sts assume-role --role-arn arn:aws:iam::733041935482:role/GithubAWSTerraformRole --role-session-name "RoleSession1" --profile IAM-user-name > assume-role-output.txt
+#       - name: Setup infra modules deploy key
+#         run: |
+#           mkdir ~/.ssh
+#           echo "${{ secrets.ssh_key_shared_modules }}" > ~/.ssh/id_rsa
+#           chmod 600 ~/.ssh/id_rsa
+#           ssh-keyscan -t rsa github.com
+       
           
-      - name: Install Terraform
-        uses: little-core-labs/install-terraform@v2.0.0
-        with:
-            version: 1.0.5
+#       - name: Configure AWS
+#         run: |
+#           export AWS_ROLE_ARN=arn:aws:iam::733041935482:role/GithubAWSTerraformRole
+#           export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
+#           export AWS_DEFAULT_REGION=us-east-2
+
+#           echo AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE >> $GITHUB_ENV
+#           echo AWS_ROLE_ARN=$AWS_ROLE_ARN >> $GITHUB_ENV
+#           echo AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION >> $GITHUB_ENV
+
+#           curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
+      
+#       # - run: aws s3 ls
+
+#       - run: aws sts get-session-token >> cred.txt
+
+
+# #       $ aws sts assume-role-with-web-identity \
+# #  --role-arn $AWS_ROLE_ARN \
+# #  --role-session-name mh9test \
+# #  --web-identity-token file://$AWS_WEB_IDENTITY_TOKEN_FILE \
+# #  --duration-seconds 1000 > /tmp/irp-cred.txt
+# # $ export AWS_ACCESS_KEY_ID="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.AccessKeyId")"
+# # $ export AWS_SECRET_ACCESS_KEY="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SecretAccessKey")"
+# # $ export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")"
+#       - run: cat cred.txt
+
+#       - run: export AWS_ACCESS_KEY_ID="$(cat cred.txt | jq -r ".Credentials.AccessKeyId")"
+
+#       - run: export AWS_SECRET_ACCESS_KEY="$(cat cred.txt | jq -r ".Credentials.SecretAccessKey")"
+
+#       # - run: aws sts assume-role --role-arn arn:aws:iam::733041935482:role/GithubAWSTerraformRole --role-session-name "RoleSession1" --profile IAM-user-name > assume-role-output.txt
           
-      - name: Setup Terragrunt
-        uses: autero1/action-terragrunt@v1.1.0
-        with:
-          terragrunt_version: latest
-      - name: Interact with Terragrunt
-        run: terragrunt --version
+#       - name: Install Terraform
+#         uses: little-core-labs/install-terraform@v2.0.0
+#         with:
+#             version: 1.0.5
+          
+#       - name: Setup Terragrunt
+#         uses: autero1/action-terragrunt@v1.1.0
+#         with:
+#           terragrunt_version: latest
+#       - name: Interact with Terragrunt
+#         run: terragrunt --version
         
-      - name: Plan Terragrunt
-        working-directory: prod/us-east-1/prod
-        run: terragrunt run-all plan
+#       - name: Plan Terragrunt
+#         working-directory: prod/us-east-1/prod
+#         run: terragrunt run-all plan
 
-      - name: Run Infracost
-        working-directory: prod/us-east-1/prod
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
-          curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
-          infracost configure --help
-          ./calculate_costs.sh
+#       - name: Run Infracost
+#         working-directory: prod/us-east-1/prod
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: |
+#           # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
+#           curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
+#           infracost configure --help
+#           ./calculate_costs.sh
         
         
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '14.17.5'
-      - name: Install dependencies
-        working-directory: .
-        run: npm install
-      - name: Create Semantic Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npx semantic-release
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v1
+#         with:
+#           node-version: '14.17.5'
+#       - name: Install dependencies
+#         working-directory: .
+#         run: npm install
+#       - name: Create Semantic Release
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#         run: npx semantic-release
 
-      # This will nofity teams
-      - name: Notify Teams
-        run: |
-          ./teams_update.sh
+#       # This will nofity teams
+#       - name: Notify Teams
+#         run: |
+#           ./teams_update.sh
