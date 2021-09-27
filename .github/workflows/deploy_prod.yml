@@ -62,7 +62,7 @@ jobs:
 
       - run: aws sts get-session-token
 
-      - run: aws sts assume-role --role-arn arn:aws:iam::733041935482:role/GithubAWSTerraformRole --role-session-name "RoleSession1" --profile IAM-user-name > assume-role-output.txt
+      # - run: aws sts assume-role --role-arn arn:aws:iam::733041935482:role/GithubAWSTerraformRole --role-session-name "RoleSession1" --profile IAM-user-name > assume-role-output.txt
           
       - name: Install Terraform
         uses: little-core-labs/install-terraform@v2.0.0
