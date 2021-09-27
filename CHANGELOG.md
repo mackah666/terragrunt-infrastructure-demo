@@ -1,3 +1,23 @@
+## [2.9.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.0...v2.9.1) (2021-09-27)
+
+
+### Bug Fixes
+
+* added fed role to replace AWS access_key ([dc55d18](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/dc55d188a4a9ca1409f29f1dd299536bcfd49c9f))
+* added hard coded docker image ([502e5fc](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/502e5fc55649b3b6504d26b06b3ed624865292be))
+* added us-east-1 ([1d1eec0](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/1d1eec0423f52e3678a13b1e9d07834192b4ba84))
+* changed dynamic provide to use assume role ([fa5bcaf](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/fa5bcaf6ba6e0c990e79f288a1bf00d271724d9d))
+* changed dynamic provide to use assume role ([423bab8](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/423bab8e6f1b3aeb1c075c97156325902cfa3cf2))
+* changed dynamic provide to use assume role ([3748979](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/374897981597986befb9d0f263b50d1001328160))
+* changed dynamic provide to use assume role ([77e3ce8](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/77e3ce8a7b424bbf1eed577cf9f920fa3be92e04))
+* changed dynamic provide to use assume role ([aabf0b1](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/aabf0b1f7b7ece82a68110113053e3b153078b2b))
+* changed dynamic provide to use assume role ([cbd76ed](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/cbd76ed252728727c6f4457cd9745a8e3f09d3f3))
+* changed dynamic provide to use assume role ([9ac6227](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/9ac6227cd749dac57ae2b63b32983486f93828bc))
+* changed dynamic provide to use assume role ([c30218c](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/c30218cffb6b51fabeb11de2f13188b756c0b7f2))
+* changed dynamic provide to use assume role ([8e77978](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/8e77978298e40611d2017e14ccc3fb6c1a8928c6))
+* changed dynamic provide to use assume role ([8f8f5f9](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/8f8f5f98c00dac417662431f2e0b011008769569))
+* changed dynamic provide to use assume role ([7086cff](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/7086cffb1b6da9c3f89820d02a62e2755ede6d7b))
+
 # [2.9.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.8.9...v2.9.0) (2021-09-03)
 
 
