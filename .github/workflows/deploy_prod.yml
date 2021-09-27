@@ -20,8 +20,8 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     env:
-      AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
+      # AWS_ACCESS_KEY_ID: ${{ secrets.DEV_AWS_ACCESS_KEY_ID }}
+      # AWS_SECRET_ACCESS_KEY: ${{ secrets.DEV_AWS_SECRET_ACCESS_KEY }}
       AWS_DEFAULT_REGION: us-east-1
       TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
       
@@ -61,7 +61,21 @@ jobs:
       - run: aws s3 ls
 
       - run: aws sts get-session-token >> cred.txt
+
+
+      $ aws sts assume-role-with-web-identity \
+ --role-arn $AWS_ROLE_ARN \
+ --role-session-name mh9test \
+ --web-identity-token file://$AWS_WEB_IDENTITY_TOKEN_FILE \
+ --duration-seconds 1000 > /tmp/irp-cred.txt
+$ export AWS_ACCESS_KEY_ID="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.AccessKeyId")"
+$ export AWS_SECRET_ACCESS_KEY="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SecretAccessKey")"
+$ export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")"
       - run: cat cred.txt
+
+      - run: export AWS_ACCESS_KEY_ID="$(cat cred.txt | jq -r ".Credentials.AccessKeyId")"
+
+      - run: export AWS_SECRET_ACCESS_KEY="$(cat cred.txt | jq -r ".Credentials.SecretAccessKey")"
 
       # - run: aws sts assume-role --role-arn arn:aws:iam::733041935482:role/GithubAWSTerraformRole --role-session-name "RoleSession1" --profile IAM-user-name > assume-role-output.txt
           
