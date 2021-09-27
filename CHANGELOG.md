@@ -1,3 +1,12 @@
+## [2.9.2](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.1...v2.9.2) (2021-09-27)
+
+
+### Bug Fixes
+
+* changed dynamic provide to use assume role ([38e3c63](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/38e3c6366862389f1a72f6a4b132b1c271a489cd))
+* changed dynamic provide to use assume role ([c9e93d2](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/c9e93d253b392c44f08714952242bf1489f0db97))
+* changed dynamic provide to use assume role ([4353473](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/4353473d021102fe2274b34ed1bdf15776759bac))
+
 ## [2.9.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.0...v2.9.1) (2021-09-27)
 
 
