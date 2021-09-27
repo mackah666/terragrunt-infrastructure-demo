@@ -60,7 +60,8 @@ jobs:
       
       - run: aws s3 ls
 
-      - run: aws sts get-session-token
+      - run: aws sts get-session-token >> cred.txt
+      - run: cat cred.txt
 
       # - run: aws sts assume-role --role-arn arn:aws:iam::733041935482:role/GithubAWSTerraformRole --role-session-name "RoleSession1" --profile IAM-user-name > assume-role-output.txt
           
