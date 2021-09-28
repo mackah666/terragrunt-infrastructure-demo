@@ -1,3 +1,10 @@
+## [2.9.7](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.6...v2.9.7) (2021-09-28)
+
+
+### Bug Fixes
+
+* updating dev_deploy with new aws creds ([18d85c6](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/18d85c6e60693c32dafeba7485cd202cd859000b))
+
 ## [2.9.6](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.5...v2.9.6) (2021-09-28)
 
 
