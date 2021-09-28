@@ -70,8 +70,8 @@ jobs:
         uses: autero1/action-terragrunt@v1.1.0
         with:
           terragrunt_version: latest
-      - name: Interact with Terragrunt
-        run: terragrunt --version
+      # - name: Interact with Terragrunt
+      #   run: terragrunt --version
         
       - name: Plan Terragrunt
         working-directory: prod/us-east-1/prod
@@ -84,7 +84,7 @@ jobs:
         run: |
           # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
           curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
-          infracost configure --help
+          # infracost configure --help
           ./calculate_costs.sh
         
         
