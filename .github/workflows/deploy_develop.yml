@@ -82,20 +82,30 @@ jobs:
       - name: Interact with Terragrunt
         run: terragrunt --version
 
-      - name: Run infracost diff
-        uses: infracost/infracost-gh-action@master
-        env:
-          INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Run infracost diff
+      #   uses: infracost/infracost-gh-action@master
+      #   env:
+      #     INFRACOST_API_KEY: ${{ secrets.INFRACOST_API_KEY }}
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-        with:
-          path: dev/us-east-1/dev
-          entrypoint: scripts/ci/diff.sh
+      #   with:
+      #     path: dev/us-east-1/dev
+      #     entrypoint: scripts/ci/diff.sh
         
       - name: Plan Terragrunt
         working-directory: dev/us-east-1/dev
         run: terragrunt run-all plan
         
+
+      - name: Run Infracost
+        working-directory: dev/us-east-1/dev
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
+          curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
+          infracost configure --help
+          ./calculate_costs.sh
         
       - name: Setup Node.js
         uses: actions/setup-node@v1
