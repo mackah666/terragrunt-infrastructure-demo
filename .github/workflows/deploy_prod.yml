@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  plan_cost_apply:
     runs-on: ubuntu-latest
     env:
       # AWS_DEFAULT_REGION: us-east-1
