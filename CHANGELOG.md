@@ -1,3 +1,24 @@
+## [2.10.7](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.6...v2.10.7) (2021-09-28)
+
+
+### Bug Fixes
+
+* restructuring the workflow ([069a224](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/069a2240772dd0b8701a952ec81de2dc387f31b1))
+* restructuring the workflow ([2ccfdfc](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/2ccfdfcd4cd2fe44999dffa6262ba7fee5698904))
+* restructuring the workflow ([eea6b73](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/eea6b7388818c73797affb2e675704778364db6b))
+* restructuring the workflow ([75eba7e](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/75eba7e1d989b97732a5ceead35c98d70295c53b))
+* restructuring the workflow ([8680214](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/868021422ac18ce4006588b3242bdf35d7d81670))
+* restructuring the workflow ([1ea27ca](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/1ea27cae77fa9744790bb1288225beb053d0f863))
+* restructuring the workflow ([a5f14e2](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/a5f14e23e869ead33b6c9f28b5ca890a3c5a3bb7))
+* restructuring the workflow ([40cccf2](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/40cccf2b9cc61ef9b2b1d00f6415ec5d0da938f3))
+* restructuring the workflow ([8d56710](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/8d56710d0a247c4a27d7548576eb9ec6de2d1319))
+* restructuring the workflow ([15097b6](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/15097b6673323935ba5bbb2524a94ce9b094f8b6))
+* restructuring the workflow ([fea2ce4](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/fea2ce480ff9e5d700cc008118065986a2dcd8bf))
+* restructuring the workflow ([b3f3c5d](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/b3f3c5d3c0caf262009e4eb826d992686847239a))
+* restructuring the workflow ([318f00c](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/318f00c15e7d32c471d6952e80f74ba413eb2d44))
+* restructuring the workflow ([38b7edb](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/38b7edbb59de6c408d664c0c2ef34547a2e15d6e))
+* restructuring the workflow ([be1eba2](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/be1eba2855fc053835ed0fc04760c2b83bc62f0c))
+
 ## [2.10.6](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.5...v2.10.6) (2021-09-28)
 
 
