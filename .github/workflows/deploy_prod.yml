@@ -18,9 +18,9 @@ jobs:
       TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    # permissions:
-    #   id-token: write
-    #   contents: read
+    permissions:
+      id-token: write
+      contents: write
     # Runs a set of commands using the runners shell
     steps:
       - name: checkout
