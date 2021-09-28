@@ -93,9 +93,9 @@ jobs:
       - name: Interact with Terragrunt
         run: terragrunt --version
         
-#       - name: Plan Terragrunt
-#         working-directory: prod/us-east-1/prod
-#         run: terragrunt run-all plan
+      - name: Plan Terragrunt
+        working-directory: prod/us-east-1/prod
+        run: terragrunt run-all plan
 
 #       - name: Run Infracost
 #         working-directory: prod/us-east-1/prod
