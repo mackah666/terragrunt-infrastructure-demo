@@ -1,3 +1,10 @@
+## [2.9.6](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.5...v2.9.6) (2021-09-28)
+
+
+### Bug Fixes
+
+* now run infracost and semantic release ([2c3a748](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/2c3a748d8e93a2a2315de15cd8af71da7fbba3bb))
+
 ## [2.9.5](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.4...v2.9.5) (2021-09-28)
 
 
