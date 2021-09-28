@@ -56,10 +56,11 @@ jobs:
   
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Setup infracost creds
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          mkdir ~/.config/infracost
+          echo "${{ secrets.INFRACOST_CREDS }}" > ~/.config/infracost/credentials.yml
+          chmod 600 ~/.config/infracost/credentials.yml
           
       - name: Setup infra modules deploy key
         run: |
