@@ -1,3 +1,11 @@
+## [2.10.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.0...v2.10.1) (2021-09-28)
+
+
+### Bug Fixes
+
+* deleted env variable for aws region ([ce08e75](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/ce08e75a389e9b900245b7a936b33e67e297b7ee))
+* looks like a default region is required ([c7c097e](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/c7c097e363df373fb94d9932781e6aeab9d1bc06))
+
 # [2.10.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.14...v2.10.0) (2021-09-28)
 
 
