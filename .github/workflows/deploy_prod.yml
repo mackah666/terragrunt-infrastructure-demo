@@ -91,7 +91,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14.17'
+          node-version: '14.17.5'
       - name: Install dependencies
         working-directory: 
         run: npm ci
