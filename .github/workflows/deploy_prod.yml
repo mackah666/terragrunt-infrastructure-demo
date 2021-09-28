@@ -81,17 +81,17 @@ jobs:
           ssh-keyscan -t rsa github.com
        
           
-#       - name: Install Terraform
-#         uses: little-core-labs/install-terraform@v2.0.0
-#         with:
-#             version: 1.0.5
+      - name: Install Terraform
+        uses: little-core-labs/install-terraform@v2.0.0
+        with:
+            version: 1.0.5
           
-#       - name: Setup Terragrunt
-#         uses: autero1/action-terragrunt@v1.1.0
-#         with:
-#           terragrunt_version: latest
-#       - name: Interact with Terragrunt
-#         run: terragrunt --version
+      - name: Setup Terragrunt
+        uses: autero1/action-terragrunt@v1.1.0
+        with:
+          terragrunt_version: latest
+      - name: Interact with Terragrunt
+        run: terragrunt --version
         
 #       - name: Plan Terragrunt
 #         working-directory: prod/us-east-1/prod
