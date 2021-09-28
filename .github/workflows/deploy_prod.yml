@@ -48,6 +48,27 @@ jobs:
           # This a test for the secrets manager and retrieving the ssh private, need to move out of the github secrets
           aws secretsmanager get-secret-value --secret-id prod/github_key_test --query SecretString --output text --region us-east-2 >> secrets.txt 
           cat secrets.txt
+
+
+  install_tooling:
+      runs-on: ubuntu-latest
+      env:
+        # AWS_DEFAULT_REGION: us-east-1
+        TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      permissions:
+        id-token: write
+        contents: write
+      # Runs a set of commands using the runners shell
+      steps:
+        - name: checkout
+          uses: actions/checkout@v2
+          with: 
+            fetch-depth: 0
+            persist-credentials: true # <--- this
+
+        - run: sleep 5 # there's still a race condition for now
   
   # install_tools:
   #   runs-on: ubuntu-latest
