@@ -22,6 +22,10 @@ jobs:
     # Runs a set of commands using the runners shell
     steps:
       - uses: actions/checkout@v2
+      - with: 
+        fetch-depth: 0
+        persist-credentials: false # <--- this
+
       - run: sleep 5 # there's still a race condition for now
 
       - name: Configure AWS
