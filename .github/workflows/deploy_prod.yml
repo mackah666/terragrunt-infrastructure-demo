@@ -35,7 +35,7 @@ jobs:
         run: |
           export AWS_ROLE_ARN=arn:aws:iam::733041935482:role/GithubAWSTerraformRole
           export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
-          export AWS_DEFAULT_REGION=us-east-1
+          # export AWS_DEFAULT_REGION=us-east-1
           echo AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE >> $GITHUB_ENV
           echo GITHUB_TOKEN=$GITHUB_TOKEN >> $GITHUB_ENV
           echo AWS_ROLE_ARN=$AWS_ROLE_ARN >> $GITHUB_ENV
