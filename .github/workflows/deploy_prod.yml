@@ -53,6 +53,7 @@ jobs:
           echo "${{ secrets.INFRACOST_CREDS }}" > ~/.config/infracost/credentials.yml
           chmod 600 ~/.config/infracost/credentials.yml
 
+      # This is required as this infrastructure uses shared terraform modules from another repository
       - name: Setup infra modules deploy key
         run: |
           mkdir ~/.ssh
