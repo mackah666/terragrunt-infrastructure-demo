@@ -1,3 +1,10 @@
+## [2.9.14](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.13...v2.9.14) (2021-09-28)
+
+
+### Bug Fixes
+
+* dont think we need aws region test ([e7aad62](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/e7aad6232c4ac50898be38d1540b0f4248b33638))
+
 ## [2.9.13](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.12...v2.9.13) (2021-09-28)
 
 
