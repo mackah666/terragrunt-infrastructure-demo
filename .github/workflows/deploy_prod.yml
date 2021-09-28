@@ -16,6 +16,8 @@ jobs:
     env:
       AWS_DEFAULT_REGION: us-east-1
       TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     permissions:
       id-token: write
       contents: read
@@ -96,8 +98,6 @@ jobs:
         working-directory: 
         run: npm ci
       - name: Create Semantic Release
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: npx semantic-release
 
       # This will nofity teams
