@@ -18,9 +18,9 @@ jobs:
       TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-    permissions:
-      id-token: write
-      contents: read
+    # permissions:
+    #   id-token: write
+    #   contents: read
     # Runs a set of commands using the runners shell
     steps:
       - name: checkout
@@ -88,19 +88,19 @@ jobs:
           ./calculate_costs.sh
         
         
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: '14.17'
-      # - name: Install dependencies
-      #   working-directory: 
-      #   run: npm ci
-      # - name: Create Semantic Release
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   run: npx semantic-release
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.17'
+      - name: Install dependencies
+        working-directory: 
+        run: npm ci
+      - name: Create Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
 
-      # # This will nofity teams
-      # - name: Notify Teams
-      #   run: |
-      #     ./teams_update.sh
+      # This will nofity teams
+      - name: Notify Teams
+        run: |
+          ./teams_update.sh
