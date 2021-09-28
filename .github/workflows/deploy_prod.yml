@@ -86,10 +86,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '14.17.5'
+          node-version: '14.17'
       - name: Install dependencies
-        working-directory: .
-        run: npm install
+        working-directory: 
+        run: npm ci
       - name: Create Semantic Release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
