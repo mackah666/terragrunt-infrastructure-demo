@@ -1,3 +1,10 @@
+## [2.10.6](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.5...v2.10.6) (2021-09-28)
+
+
+### Bug Fixes
+
+* secrets manager working now ([3ead2ff](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/3ead2ffdfea81627c3c3d5b7291ff66c3ccaf476))
+
 ## [2.10.5](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.4...v2.10.5) (2021-09-28)
 
 
