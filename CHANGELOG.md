@@ -1,3 +1,10 @@
+## [2.10.5](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.4...v2.10.5) (2021-09-28)
+
+
+### Bug Fixes
+
+* testting secrets manager with query to get secret string ([7b3d2e7](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/7b3d2e7dab9944728908127a61e3d545e58612ac))
+
 ## [2.10.4](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.3...v2.10.4) (2021-09-28)
 
 
