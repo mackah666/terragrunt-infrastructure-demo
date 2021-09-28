@@ -101,6 +101,7 @@ jobs:
       runs-on: ubuntu-latest
       steps:
         - name: Plan Terragrunt
+          uses: actions/checkout@v2
           working-directory: prod/us-east-1/prod
           run: terragrunt run-all plan
   # install_tools:
