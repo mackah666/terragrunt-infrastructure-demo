@@ -50,7 +50,7 @@ jobs:
           cat secrets.txt
   
   install_tools:
-      needs: configure_aws
+    needs: configure_aws
       - name: Setup infracost creds
         run: |
           mkdir ~/.config/infracost
