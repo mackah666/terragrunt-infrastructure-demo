@@ -27,7 +27,7 @@ jobs:
           export AWS_SECRET_ACCESS_KEY="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SecretAccessKey")" >> $GITHUB_ENV
           export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")" >> $GITHUB_ENV
           echo $AWS_ACCESS_KEY_ID
-          echo AWS_SECRET_ACCESS_KEY
+          echo $AWS_SECRET_ACCESS_KEY
           echo "I think I got this"
 
   
