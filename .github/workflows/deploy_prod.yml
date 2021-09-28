@@ -6,7 +6,7 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-     env:
+    env:
       AWS_DEFAULT_REGION: us-east-1
       TF_VAR_master_password: ${{ secrets.TF_VAR_master_password }}
     permissions:
