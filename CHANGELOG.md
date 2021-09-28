@@ -1,3 +1,10 @@
+## [2.9.13](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.12...v2.9.13) (2021-09-28)
+
+
+### Bug Fixes
+
+* updating dev_deploy with infracost creds ([fb4f80c](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/fb4f80c650e357b8ae4eb97da089223267c15826))
+
 ## [2.9.12](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.11...v2.9.12) (2021-09-28)
 
 
