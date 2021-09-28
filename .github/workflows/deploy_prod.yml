@@ -17,27 +17,21 @@ jobs:
           export AWS_ROLE_ARN=arn:aws:iam::733041935482:role/GithubAWSTerraformRole
           export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
           export AWS_DEFAULT_REGION=us-east-1
-
           echo AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE >> $GITHUB_ENV
           echo AWS_ROLE_ARN=$AWS_ROLE_ARN >> $GITHUB_ENV
           echo AWS_DEFAULT_REGION=$AWS_DEFAULT_REGION >> $GITHUB_ENV
-
           curl -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" "$ACTIONS_ID_TOKEN_REQUEST_URL" | jq -r '.value' > $AWS_WEB_IDENTITY_TOKEN_FILE
-
-  
-
-      - run:  | 
           aws sts assume-role-with-web-identity --role-arn $AWS_ROLE_ARN --role-session-name mh9test --web-identity-token file://$AWS_WEB_IDENTITY_TOKEN_FILE --duration-seconds 1000 > /tmp/irp-cred.txt
           cat /tmp/irp-cred.txt
           export AWS_ACCESS_KEY_ID="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.AccessKeyId")" >> $GITHUB_ENV
+          export AWS_SECRET_ACCESS_KEY="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SecretAccessKey")" >> $GITHUB_ENV
+          export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")" >> $GITHUB_ENV
           echo $AWS_ACCESS_KEY_ID
+          echo AWS_SECRET_ACCESS_KEY
           echo "I think I got this"
 
-      - run: export AWS_SECRET_ACCESS_KEY="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SecretAccessKey")"
-      
-      - run: export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")"
-
-      # - run: aws sts get-session-token >> cred.txt
+  
+          
 
 # # This is a basic workflow to help you get started with Actions
 
