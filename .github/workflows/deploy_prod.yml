@@ -1,7 +1,14 @@
-# .github/workflows/example.yml
-name: Example
+name: Prod Deploy
+
+# Controls when the workflow will run
 on:
+  # Triggers the workflow on push or pull request events but only for the main branch
   push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+# Allows you to run this workflow manually from the Actions tab
+workflow_dispatch:
 
 jobs:
   build:
@@ -12,6 +19,7 @@ jobs:
     permissions:
       id-token: write
       contents: read
+    # Runs a set of commands using the runners shell
     steps:
       - uses: actions/checkout@v2
       - run: sleep 5 # there's still a race condition for now
@@ -32,41 +40,8 @@ jobs:
           export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")" >> $GITHUB_ENV
           echo $AWS_ACCESS_KEY_ID
           echo $AWS_SECRET_ACCESS_KEY
-          echo "I think I got this"
+          echo "I think I got this"    
 
-  
-          
-
-# # This is a basic workflow to help you get started with Actions
-
-# name: Prod Deploy
-
-# # Controls when the workflow will run
-# on:
-#   # Triggers the workflow on push or pull request events but only for the main branch
-#   push:
-#     branches: [ main ]
-#   pull_request:
-#     branches: [ main ]
-
-#   # Allows you to run this workflow manually from the Actions tab
-#   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
-# jobs:
-#   # This workflow contains a single job called "build"
-#   build:
-#     # The type of runner that the job will run on
-#     runs-on: ubuntu-latest
-   
-      
-
-    # Steps represent a sequence of tasks that will be executed as part of the job
-    # steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-    
-
-      # Runs a set of commands using the runners shell
       - name: Setup infracost creds
         run: |
           mkdir ~/.config/infracost
@@ -97,30 +72,30 @@ jobs:
         working-directory: prod/us-east-1/prod
         run: terragrunt run-all plan
 
-#       - name: Run Infracost
-#         working-directory: prod/us-east-1/prod
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         run: |
-#           # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
-#           curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
-#           infracost configure --help
-#           ./calculate_costs.sh
+      - name: Run Infracost
+        working-directory: prod/us-east-1/prod
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
+          curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
+          infracost configure --help
+          ./calculate_costs.sh
         
         
-#       - name: Setup Node.js
-#         uses: actions/setup-node@v1
-#         with:
-#           node-version: '14.17.5'
-#       - name: Install dependencies
-#         working-directory: .
-#         run: npm install
-#       - name: Create Semantic Release
-#         env:
-#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#         run: npx semantic-release
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '14.17.5'
+      - name: Install dependencies
+        working-directory: .
+        run: npm install
+      - name: Create Semantic Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: npx semantic-release
 
-#       # This will nofity teams
-#       - name: Notify Teams
-#         run: |
-#           ./teams_update.sh
+      # This will nofity teams
+      - name: Notify Teams
+        run: |
+          ./teams_update.sh
