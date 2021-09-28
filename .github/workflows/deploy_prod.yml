@@ -99,7 +99,7 @@ jobs:
   run_terragrunt_plan:
       needs: install_tooling
       runs-on: ubuntu-latest
-
+      steps:
         - name: Plan Terragrunt
           working-directory: prod/us-east-1/prod
           run: terragrunt run-all plan
