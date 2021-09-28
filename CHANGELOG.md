@@ -1,3 +1,10 @@
+# [2.10.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.14...v2.10.0) (2021-09-28)
+
+
+### Features
+
+* this is now fully operational ([23cbb1a](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/23cbb1aa392337233c149b15ff2ee78a47080b81))
+
 ## [2.9.14](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.9.13...v2.9.14) (2021-09-28)
 
 
