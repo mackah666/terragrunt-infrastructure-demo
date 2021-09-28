@@ -45,7 +45,7 @@ jobs:
           export AWS_ACCESS_KEY_ID="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.AccessKeyId")" >> $GITHUB_ENV
           export AWS_SECRET_ACCESS_KEY="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SecretAccessKey")" >> $GITHUB_ENV
           export AWS_SESSION_TOKEN="$(cat /tmp/irp-cred.txt | jq -r ".Credentials.SessionToken")" >> $GITHUB_ENV
-          aws secretsmanager get-secret-value --secret-id prod/github_key --query SecretString >> secrets.txt --region us-east-2
+          aws secretsmanager get-secret-value --secret-id prod/github_key --query SecretString --output text --region us-east-2 >> secrets.txt 
           # aws secretsmanager get-secret-value --secret-id secrets --query SecretString --output text
           cat secrets.txt
   
