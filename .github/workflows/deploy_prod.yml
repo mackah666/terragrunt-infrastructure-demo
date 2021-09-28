@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  configure_aws:
     runs-on: ubuntu-latest
     env:
       # AWS_DEFAULT_REGION: us-east-1
@@ -49,7 +49,8 @@ jobs:
           aws secretsmanager get-secret-value --secret-id prod/github_key_test --query SecretString --output text --region us-east-2 >> secrets.txt 
           cat secrets.txt
   
-
+  install_tools:
+      needs: configure_aws
       - name: Setup infracost creds
         run: |
           mkdir ~/.config/infracost
