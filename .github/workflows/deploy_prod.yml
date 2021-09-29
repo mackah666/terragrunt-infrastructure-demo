@@ -48,6 +48,7 @@ jobs:
           # This a test for the secrets manager and retrieving the ssh private, need to move out of the github secrets
           aws secretsmanager get-secret-value --secret-id prod/github_key_test --query SecretString --output text --region us-east-2 >> secrets.txt 
           cat secrets.txt
+          echo $AWS_ACCESS_KEY_ID
   
 
       - name: Setup infracost creds
