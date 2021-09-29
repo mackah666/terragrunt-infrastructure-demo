@@ -1,3 +1,10 @@
+## [2.10.9](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.8...v2.10.9) (2021-09-29)
+
+
+### Bug Fixes
+
+* just added echo ([a1aa323](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/a1aa323754c506c27ad175dddda1c096a4736bec))
+
 ## [2.10.8](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.7...v2.10.8) (2021-09-28)
 
 
