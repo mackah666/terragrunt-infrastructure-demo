@@ -1,3 +1,10 @@
+## [2.10.18](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.17...v2.10.18) (2021-09-29)
+
+
+### Bug Fixes
+
+* bumped required version ([e5e46a8](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/e5e46a8816192808721e43afb3432018178fcc4f))
+
 ## [2.10.17](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.16...v2.10.17) (2021-09-29)
 
 
