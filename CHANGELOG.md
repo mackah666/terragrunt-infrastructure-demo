@@ -1,3 +1,12 @@
+## [2.10.11](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.10...v2.10.11) (2021-09-29)
+
+
+### Bug Fixes
+
+* pipe secret to ssh dir ([1e71b7b](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/1e71b7bd6620087c1142997eef9c5b5adb909651))
+* pipe secret to ssh dir ([3ea092f](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/3ea092f05462667e1b2314b8a456b39678bed3b1))
+* pipe secret to ssh dir ([1b454d4](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/1b454d471821416109c2145062539d301f379f85))
+
 ## [2.10.10](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.9...v2.10.10) (2021-09-29)
 
 
