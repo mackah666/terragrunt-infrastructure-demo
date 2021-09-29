@@ -13,7 +13,7 @@ for planfile in "${planfiles[@]}"; do
   cd $dir
   terraform show -json $(basename $planfile) > infracost-plan.json
   cd -
-  infracost breakdown --path $dir/infracost-plan.json --format json > $dir/infracost-out.json
+  infracost breakdown --path $dir/infracost-plan.json --usage-file infracost-usage.yml --format json > $dir/infracost-out.json
   rm $planfile
 done
 
