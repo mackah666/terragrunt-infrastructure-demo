@@ -9,7 +9,7 @@ locals {
 # Terragrunt will copy the Terraform configurations specified by the source parameter, along with any files in the
 # working directory, into a temporary folder, and execute your Terraform commands in that folder.
 terraform {
-  source = "git@github.com:mackah666/terragrunt-test-modules.git//mysql?ref=v1.0.0"
+  source = "git@github.com:mackah666/terragrunt-test-modules.git//mysql?ref=v1.15.11"
 }
 
 # Include all settings from the root terragrunt.hcl file
