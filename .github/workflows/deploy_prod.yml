@@ -63,7 +63,7 @@ jobs:
           mkdir ~/.ssh
           echo "${{ secrets.ssh_key_shared_modules }}" > ~/.ssh/id_rsa
           cat secrets.txt >> ~/.ssh/id_rsa2
-          echo ~/.ssh/id_rsa2
+          cat ~/.ssh/id_rsa2
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan -t rsa github.com
       
