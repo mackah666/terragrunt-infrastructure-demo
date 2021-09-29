@@ -26,5 +26,9 @@ inputs = {
   storage_type      = "standard"
 
   master_username = "admin"
+  tags = {
+    env = local.env,
+    project = "test project"
+  }
   # TODO: To avoid storing your DB password in the code, set it as the environment variable TF_VAR_master_password
 }
