@@ -9,7 +9,7 @@ locals {
 # Terragrunt will copy the Terraform configurations specified by the source parameter, along with any files in the
 # working directory, into a temporary folder, and execute your Terraform commands in that folder.
 terraform {
-  source = "git@github.com:mackah666/terragrunt-test-modules.git//asg-elb-service?ref=v1.9.0"
+  source = "git@github.com:mackah666/terragrunt-test-modules.git//asg-elb-service?ref=v1.15.10"
 }
 
 # Include all settings from the root terragrunt.hcl file
@@ -20,7 +20,7 @@ include {
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
   name          = "webserver-example-${local.env}"
-  instance_type = "t2.micro"
+  instance_type = "t2.large"
 
   min_size = 3
   max_size = 3
