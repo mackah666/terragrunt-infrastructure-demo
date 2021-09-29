@@ -1,3 +1,13 @@
+## [2.10.17](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.16...v2.10.17) (2021-09-29)
+
+
+### Bug Fixes
+
+* bumped required version ([4bc52ee](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/4bc52eef89c79c3a7b22e1139ce8dc7b3905c91b))
+* testing infracostwith ami ([0071ee0](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/0071ee08970f22485e8faca4a849bbb10ee1ea41))
+* testing infracostwith ami ([89bba69](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/89bba69ad41c3a01b7e9b0b983340ace291a8493))
+* testing infracostwith ami ([df8b185](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/df8b1858eacf55651056b359f480cdcd9a160169))
+
 ## [2.10.16](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.15...v2.10.16) (2021-09-29)
 
 
