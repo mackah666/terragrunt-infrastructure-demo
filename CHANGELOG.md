@@ -1,3 +1,10 @@
+## [2.10.8](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.7...v2.10.8) (2021-09-28)
+
+
+### Bug Fixes
+
+* restructuring the workflow ([ea29303](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/ea293032399bf3a2e7ebbfdac1a34d83c5d9b1b1))
+
 ## [2.10.7](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.6...v2.10.7) (2021-09-28)
 
 
