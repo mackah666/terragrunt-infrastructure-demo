@@ -1,3 +1,11 @@
+# [2.12.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.11.0...v2.12.0) (2021-09-30)
+
+
+### Features
+
+* removed all infracost scripts as not longer needed ([74573f3](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/74573f367b92e373760410d9468b6953aa9133f4))
+* removed all infracost scripts as not longer needed ([2b94510](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/2b94510e05b8fb893d7e86711309259c7c9fad74))
+
 # [2.11.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.10.18...v2.11.0) (2021-09-30)
 
 
