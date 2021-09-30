@@ -1,3 +1,10 @@
+## [2.12.1](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.12.0...v2.12.1) (2021-09-30)
+
+
+### Bug Fixes
+
+* added path to infracost command ([94c2e76](https://github.com/mackah666/terragrunt-infrastructure-demo/commit/94c2e762c162101c3d69aa9fedd411eaa78e242e))
+
 # [2.12.0](https://github.com/mackah666/terragrunt-infrastructure-demo/compare/v2.11.0...v2.12.0) (2021-09-30)
 
 
