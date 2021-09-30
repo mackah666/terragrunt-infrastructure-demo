@@ -88,7 +88,8 @@ jobs:
         run: |
           # Downloads the CLI based on your OS/arch and puts it in /usr/local/bin
           curl -fsSL https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh | sh
-          ./calculate_costs.sh
+          # ./calculate_costs.sh
+          infracost breakdown --path .
         
         
       - name: Setup Node.js

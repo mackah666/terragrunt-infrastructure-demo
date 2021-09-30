@@ -2,6 +2,14 @@ locals {
   # Automatically load environment-level variables
   environment_vars = read_terragrunt_config(find_in_parent_folders("env.hcl"))
 
+  common_tags = read_terragrunt_config(find_in_parent_folders("common_tags.hcl"))
+
+  env_tags = {
+      component      = "AutoScalingGroup"
+      environment    = local.environment_vars.locals.environment
+      team           = "The A Team"
+  }
+
   # Extract out common variables for reuse
   env = local.environment_vars.locals.environment
 }
@@ -27,4 +35,6 @@ inputs = {
 
   server_port = 8080
   elb_port    = 80
+
+  default_tags = merge(local.common_tags)
 }

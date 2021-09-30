@@ -18,6 +18,12 @@ locals {
   account_name = local.account_vars.locals.account_name
   account_id   = local.account_vars.locals.aws_account_id
   aws_region   = local.region_vars.locals.aws_region
+
+  default_tags = {
+    application_name  = "<application_name>"
+    environment       = "<environment>"
+  }
+
 }
 
 # Generate an AWS provider block
