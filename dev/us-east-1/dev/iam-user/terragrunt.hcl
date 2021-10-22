@@ -20,8 +20,8 @@ include {
 
 # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
-  name = "yusef.ackah"
+  name                          = "yusef.ackah"
   create_iam_user_login_profile = true
   create_iam_access_key         = true
-  pgp_key = "keybase:test"
+  pgp_key                       = "keybase:test"
 }

@@ -20,8 +20,8 @@ locals {
   aws_region   = local.region_vars.locals.aws_region
 
   default_tags = {
-    application_name  = "<application_name>"
-    environment       = "<environment>"
+    application_name = "<application_name>"
+    environment      = "<environment>"
   }
 
 }

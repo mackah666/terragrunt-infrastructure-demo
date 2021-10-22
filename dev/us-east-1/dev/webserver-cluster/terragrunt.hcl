@@ -5,9 +5,9 @@ locals {
   common_tags = read_terragrunt_config(find_in_parent_folders("common_tags.hcl"))
 
   env_tags = {
-      component      = "AutoScalingGroup"
-      environment    = local.environment_vars.locals.environment
-      team           = "The A Team"
+    component   = "AutoScalingGroup"
+    environment = local.environment_vars.locals.environment
+    team        = "The A Team"
   }
 
   # Extract out common variables for reuse

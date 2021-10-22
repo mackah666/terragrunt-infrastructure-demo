@@ -9,16 +9,15 @@ locals {
   common_tags = read_terragrunt_config(find_in_parent_folders("common_tags.hcl"))
 
   env_tags = {
-      Component      = "RDS"
-      Environment    = local.environment_vars.locals.environment
-      Team           = "The A Team"
+    Component   = "RDS"
+    Environment = local.environment_vars.locals.environment
   }
 }
 
 # Terragrunt will copy the Terraform configurations specified by the source parameter, along with any files in the
 # working directory, into a temporary folder, and execute your Terraform commands in that folder.
 terraform {
-  source = "git@github.com:mackah666/terragrunt-test-modules.git//mysql?ref=v1.16.7"
+  source = "git@github.com:mackah666/terragrunt-test-modules.git//mysql?ref=v1.16.8"
 }
 
 # Include all settings from the root terragrunt.hcl file

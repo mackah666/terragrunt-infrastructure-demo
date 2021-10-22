@@ -21,12 +21,12 @@ include {
 # # These are the variables we have to pass in to use the module specified in the terragrunt configuration above
 inputs = {
 
-#   name           = "mysql_${local.env}"
-#   instance_class = "db.t2.micro"
+  #   name           = "mysql_${local.env}"
+  #   instance_class = "db.t2.micro"
 
-#   allocated_storage = 20
-#   storage_type      = "standard"
+  #   allocated_storage = 20
+  #   storage_type      = "standard"
 
-#   master_username = "admin"
-#   # TODO: To avoid storing your DB password in the code, set it as the environment variable TF_VAR_master_password
+  #   master_username = "admin"
+  #   # TODO: To avoid storing your DB password in the code, set it as the environment variable TF_VAR_master_password
 }
